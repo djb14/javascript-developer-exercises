@@ -21,6 +21,11 @@ Place your code that does all of this below this comment block, and
 before the next comment block.
 */
 // PLACE YOUR CODE BELOW
+const wordListArray = words.map((word)=>{
+  return `${word[1]}${word[2]}`;
+});
+
+wordList = wordListArray.join(', ');
 
 // PLACE YOUR CODE ABOVE
 /*

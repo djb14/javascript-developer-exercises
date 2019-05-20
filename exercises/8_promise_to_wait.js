@@ -16,6 +16,19 @@ to the console, waits 3 more seconds and then writes
 console.log('Go!')
 
 // PLACE YOUR CODE BELOW
+//AsyncAwait Promise
+const asyncFunc = async()=>{
+  await wait(1);
+  console.log('I waited 1 second with AsyncAwait');
+  await wait(3);
+  console.log('I waited 3 seconds with AsyncAwait');
+}
+asyncFunc();
+//Traditional Promise Chain
+let firstPromise = wait(1).then(()=>{console.log('I waited 1 seconds with a Promise Chain')});
+let secondPromise = wait(3).then(()=>{console.log('I waited 3 seconds with a Promise Chain')});
+firstPromise
+  .then(secondPromise);
 
 // PLACE YOUR CODE ABOVE
 /*
